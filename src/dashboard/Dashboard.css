@@ -1,0 +1,20 @@
+.dashboard {
+    font-size: 15px;
+}
+.homeLogo {
+    padding-left: 20px;
+    max-width: 70px;
+    max-height: 70px;
+}
+.result {
+    padding-bottom: 10px;
+}
+.results {
+    padding: 20px;
+}
+
+.result-img {
+    width: 100%;
+    height: 20vw;
+    object-fit: cover;
+}
