@@ -1,5 +1,5 @@
 import Login from './auth/Login';
-import Dashboard from './dashboard/Dashboard';
+import Landing from './landing/Landing';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -9,8 +9,8 @@ function App() {
     <div className="App">
       <Router>
         <Switch>
-          <Route exact path="/" component={Login} />
-          <Route exact path="/dashboard" component={Dashboard} />
+          <Route exact path="/login" component={Login} />
+          <Route exact path="*" component={Landing} />
         </Switch>
       </Router>
     </div>

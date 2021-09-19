@@ -9,7 +9,7 @@ export default function Login() {
     const history = useHistory();
     useEffect(() => {
       if (loading) return;
-      if (user) history.replace("/dashboard");
+      if (user) history.replace("/");
     }, [user, loading, history]);
 
   return (
@@ -17,16 +17,15 @@ export default function Login() {
         <div className="login_panel">
 
             <div className="login_logoImage responsive">
-                <img alt="logo" src="logo.png" /> 
+                <img alt="logo" src="logo.svg" /> 
             </div>  
 
             <div className="google-btn" onClick={signInWithGoogle}>
                 <div className="google-icon-wrapper">
-                  <img class="google-icon" src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" />
+                  <img alt="google-sign-in" class="google-icon" src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" />
                 </div>
                   <p class="btn-text"><b>Sign in with google</b></p>
             </div>
-
         </div>
     </section>
   );

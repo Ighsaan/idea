@@ -1,0 +1,118 @@
+.profile {
+    /* border-style: solid; */
+    width: 75% !important;
+    padding-top: 25px;
+}
+.profile-banner {
+    border: solid;
+    border-width: thin;
+    border-color: lightgrey;
+}
+.profile-content {
+    background-color:lightsteelblue;
+}
+
+/* Profile Header*/
+.project-logo {
+    max-width: 250px;
+    min-height: 250px;
+    object-fit: fill;
+}
+
+.profile-header-text{
+    padding: 30px 0;
+    position:relative;
+}
+.profile-header-name {
+    padding-left: 50px;
+    font-size: 45px;
+    font-family: Helvetica, Arial , sans-serif
+}
+.profile-header-caption {
+    padding-left: 50px;
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif
+}
+.profile-header-date-created {
+    position:absolute;
+    bottom:0;
+    right:30px;
+}
+
+/* Profile Nav Bar*/
+.profile-nav {
+    border: solid;
+    border-width: thin;
+    border-top: 0;
+    border-color: lightgrey;
+    background-color: rgb(196, 196, 196);
+}
+
+.profile-nav-bar {
+    padding-top: 15px;
+    text-align: center;
+    font-weight: bolder;
+}
+
+/* Profile Body */
+.profile-body {
+    border: solid;
+    border-width: thin;
+    border-top: 0;
+    border-color: lightgrey;
+    background: #efefef;
+    padding: 20px;
+    overflow-y: scroll;
+    height:calc(100vh - 530px);
+}
+
+/* Profile Footer */
+.profile-footer {
+    /* position: absolute; */
+    background: lightgrey;
+    height:100px;
+    bottom: 0px;
+    border: solid;
+    border-top: 0;
+    border-width: thin;
+    border-color: lightgrey;
+}
+
+/* Owner Details*/
+.profile-owner img{
+    border-radius: 50%;
+    max-width: 90px;
+    width: 100%;
+    
+    max-height: 90px;
+    height: 90px;
+}
+
+.profile-owner {
+    /* align-items: center; */
+    text-align: center;
+}
+
+.profile-owner-name {
+    display: flex;
+    height: 100px;
+    /* align-items: center; */
+    /* text-align: center; */
+}
+
+/* Social */
+.social {
+    height: 100px;
+    display: flex;
+    position: relative;
+    float: right;
+    padding-right: 10px;
+}
+
+.profile-social-icon {
+    padding-right: 10px;
+}
+
+.selected {
+    text-decoration: underline;
+}
