@@ -3,13 +3,13 @@
     width: 75% !important;
     padding-top: 25px;
 }
-.profile-banner {
+.profile-header {
     border: solid;
     border-width: thin;
     border-color: lightgrey;
 }
 .profile-content {
-    background-color:lightsteelblue;
+    background:#fafafa;
 }
 
 /* Profile Header*/
@@ -22,16 +22,15 @@
 .profile-header-text{
     padding: 30px 0;
     position:relative;
+    font-family: 'Montserrat', sans-serif;
 }
 .profile-header-name {
     padding-left: 50px;
     font-size: 45px;
-    font-family: Helvetica, Arial , sans-serif
 }
 .profile-header-caption {
     padding-left: 50px;
     font-size: 25px;
-    font-family: Arial, Helvetica, sans-serif
 }
 .profile-header-date-created {
     position:absolute;
@@ -41,27 +40,42 @@
 
 /* Profile Nav Bar*/
 .profile-nav {
-    border: solid;
-    border-width: thin;
-    border-top: 0;
-    border-color: lightgrey;
-    background-color: rgb(196, 196, 196);
+    font-family: 'Montserrat', sans-serif;
+    color: grey;    
+    background:#fafafa;
+    border-bottom: 1px solid lightgray;
+    border-left: 1px solid lightgray;
+    border-right: 1px solid lightgray;
 }
 
 .profile-nav-bar {
-    padding-top: 15px;
+    padding-bottom:0px !important;
     text-align: center;
     font-weight: bolder;
 }
 
+.profile-nav-bar-item{
+    padding-top: 15px; 
+    height: 100%;
+}
+
+.profile-nav-bar-item :hover{
+    /* background-color: lightgrey; */
+    color: black;
+    cursor: pointer;
+    height: 100%;
+    transform: scale(1.2);
+}
+
 /* Profile Body */
 .profile-body {
-    border: solid;
-    border-width: thin;
-    border-top: 0;
-    border-color: lightgrey;
-    background: #efefef;
-    padding: 20px;
+    
+    padding: 50px 100px 50px 100px;
+    border-left: 1px solid lightgray;
+    border-right: 1px solid lightgray;
+    background: #fafafa;
+    line-height: 2 ;
+    font-family: 'Montserrat', sans-serif;
     overflow-y: scroll;
     height:calc(100vh - 530px);
 }
@@ -69,18 +83,25 @@
 /* Profile Footer */
 .profile-footer {
     /* position: absolute; */
-    background: lightgrey;
+    background: #fafafa;
     height:100px;
-    bottom: 0px;
-    border: solid;
-    border-top: 0;
-    border-width: thin;
-    border-color: lightgrey;
+    border-top: 1px solid lightgray;
+    border-left: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+    border-right: 1px solid lightgray;
 }
 
 /* Owner Details*/
+.profile-owner {
+    /* align-items: center; */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
 .profile-owner img{
     border-radius: 50%;
+    padding-left: 0px;
     max-width: 90px;
     width: 100%;
     
@@ -88,31 +109,24 @@
     height: 90px;
 }
 
-.profile-owner {
-    /* align-items: center; */
-    text-align: center;
-}
-
 .profile-owner-name {
     display: flex;
     height: 100px;
     /* align-items: center; */
-    /* text-align: center; */
+     text-align: left; 
 }
 
 /* Social */
 .social {
     height: 100px;
-    display: flex;
     position: relative;
     float: right;
-    padding-right: 10px;
+    display: inline-grid;
+    grid-template-columns: repeat(4, auto);
+    column-gap: 14px;
 }
 
 .profile-social-icon {
     padding-right: 10px;
 }
 
-.selected {
-    text-decoration: underline;
-}
