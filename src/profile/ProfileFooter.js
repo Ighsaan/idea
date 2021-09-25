@@ -21,8 +21,8 @@ export default function ProfileFooter(props) {
                     </div>
                     <div className="col-md-8">
                         <div className="social align-items-center">
-                            <SocialIcon url="https://twitter.com/jaketrent" style={{ height: 40, width: 40 }}/>
-                            <SocialIcon url="https://github.com/jaketrent" style={{ height: 40, width: 40 }}/>
+                                <SocialIcon url="https://twitter.com/jaketrent" />
+                                <SocialIcon url="https://github.com/jaketrent"/>
                         </div>
                     </div>
                 {/* https://firebasestorage.googleapis.com/v0/b/ideas-4c887.appspot.com/o/intel.png?alt=media&token=1cda783a-4e83-4ebb-92f4-3cc248552aeb */}

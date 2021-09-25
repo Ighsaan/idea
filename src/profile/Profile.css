@@ -118,7 +118,7 @@
 
 /* Social */
 .social {
-    height: 100px;
+    height: 100%;
     position: relative;
     float: right;
     display: inline-grid;
@@ -128,5 +128,6 @@
 
 .profile-social-icon {
     padding-right: 10px;
+    width:40px;
+    height: 40px;
 }
-
