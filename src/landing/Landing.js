@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useHistory } from "react-router";
+import { Link } from "react-router-dom";
 import { auth, logout } from "../services/firebase";
 import { Navbar, NavDropdown, Form, FormControl } from "react-bootstrap";
 import { Switch, Route, useRouteMatch } from "react-router-dom";
@@ -24,9 +25,11 @@ function LandingPage() {
     return (
         <div className="dashboard">
             <Navbar bg="light" expand="lg">
-                <Navbar.Brand href="#">
-                    <img className="homeLogo" alt="logo" src="favicon.ico" /> 
-                </Navbar.Brand>
+                <Link to="/" style={{ textDecoration: 'none' }}>
+                    <Navbar.Brand>
+                        <img className="homeLogo" alt="logo" src="favicon.ico" /> 
+                    </Navbar.Brand>
+                </Link>
                     <Form className="d-flex">
                         <FormControl
                             type="search"
