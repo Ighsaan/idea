@@ -1,5 +1,6 @@
 {
   "name": "idea",
+  "homepage": "https://ighsaan.github.io/idea/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
