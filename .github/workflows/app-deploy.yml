@@ -4,9 +4,6 @@ on:
   push:
     branches:
       - initial-branch
-  pull_request:
-    branches:
-      - initial-branch
 
 jobs:
   build:
@@ -20,10 +17,10 @@ jobs:
     - name: Install Node.js
       uses: actions/setup-node@v1
       with:
-        node-version: 13.x
+        node-version: 14.x
     
     - name: Install NPM packages
-      run: npm ci
+      run: yarn install --frozen-lockfile
     
     - name: Build project
       run: npm run build
