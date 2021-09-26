@@ -15,12 +15,10 @@ function IdeaProfile() {
     let ideaName = "Vervet";
     let subtitle = "Security through unity";
     return <div className="container-fluid profile ">
-        {/* <div className="profile"> */}
             <ProfileHeader ideaName={ideaName} subtitle={subtitle}/>
             <ProfileNav />
             <ProfileBody />
             <ProfileFooter />
-        {/* </div> */}
     </div>;
 }
 export default IdeaProfile;
