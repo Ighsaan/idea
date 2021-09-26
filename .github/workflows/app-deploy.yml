@@ -41,7 +41,7 @@ jobs:
     name: Deploy
     needs: build
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/initial-build'
+    # if: github.ref == 'refs/heads/initial-build'
     
     steps:
     - name: Download artifact
