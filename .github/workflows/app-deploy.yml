@@ -1,9 +1,12 @@
 name: Build & deploy
 
 on:
+
   push:
     branches:
-      - initial-branch
+      - initial-build
+    paths:
+      - "./**"
 
 jobs:
   build:
@@ -38,7 +41,7 @@ jobs:
     name: Deploy
     needs: build
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/initial-branch'
+    if: github.ref == 'refs/heads/initial-build'
     
     steps:
     - name: Download artifact
