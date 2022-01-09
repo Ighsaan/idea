@@ -4,21 +4,37 @@ import ProfileNav from "./ProfileNav";
 import ProfileBody from "./ProfileBody";
 import ProfileFooter from "./ProfileFooter";
 import "./Profile.css";
-// import { useAuthState } from "react-firebase-hooks/auth";
-// import { useHistory } from "react-router";
-// import { auth } from "../services/firebase";
+
+import { Route, Switch, useRouteMatch } from "react-router-dom";
+import { useParams } from "react-router-dom";
+import { DataAccessor } from "../services/data-accessor";
+
+type IdeaParams = {
+    id: string;
+};
 
 function IdeaProfile() {
 
-    
-//   let { topicId } = useParams();
-    let ideaName = "Vervet";
-    let subtitle = "Security through unity";
+    const dataAccessor = new DataAccessor();
+    let { path } = useRouteMatch();
+    const { id } = useParams<IdeaParams>();
+
+    const data = dataAccessor.getProjectData(id);
     return <div className="container-fluid profile ">
-            <ProfileHeader ideaName={ideaName} subtitle={subtitle}/>
+            <ProfileHeader ideaName={data.name} subtitle={data.subtitle} created_at={data.created_at} logoUrl={data.logo_url}/>
             <ProfileNav />
-            <ProfileBody />
-            <ProfileFooter />
+            <Switch>
+                <Route path={`${path}/resources`}>
+                    <h1>hello</h1>
+                </Route>
+                <Route path={`${path}/about`}>
+                    <ProfileBody />
+                </Route>
+                <Route path={`${path}`}>
+                    <ProfileBody />
+                </Route>
+            </Switch>
+            <ProfileFooter orgName={data.organization.name} imageUrl={data.organization.logo} socials={data.socials}/>
     </div>;
 }
 export default IdeaProfile;

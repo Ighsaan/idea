@@ -49,7 +49,7 @@ function LandingPage() {
             </Navbar>
 
             <Switch>
-                <Route path={`${path}/profile`} component={IdeaProfile} />
+                <Route path={`${path}/profile/:id`} component={IdeaProfile} />
                 <Route exact path={path} component={Dashboard} />
             </Switch>
         </div>

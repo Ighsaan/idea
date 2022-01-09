@@ -3,14 +3,16 @@ import { Link } from "react-router-dom";
 import './Dashboard.css';
 
 interface ResultProps {
+    id: string,
     imageUrl: string,
     name: string,
     subtitle: string,
     description: string
 }
 function Result(props: ResultProps) {
+    let url = "/profile/" + props.id;
     return (
-        <Link to="/profile" style={{ textDecoration: 'none' }}>
+        <Link to={url} style={{ textDecoration: 'none' }}>
             <div className="results">
                     <Col className="result">
                         <Card className = "result-card">
