@@ -2,6 +2,7 @@ import React from "react";
 import ProfileHeader from "./ProfileHeader";
 import ProfileNav from "./ProfileNav";
 import ProfileBody from "./ProfileBody";
+import ProfileCollaborators from "./ProfileCollaborators";
 import ProfileFooter from "./ProfileFooter";
 import "./Profile.css";
 
@@ -26,7 +27,7 @@ function IdeaProfile() {
                 <Route path="/" element={<ProfileBody />} />
                 <Route path="resources" element={<h1>test</h1>} />
                 <Route path="timeline" element={<ProfileBody />} />
-                <Route path="collaborators" element={<ProfileBody />} />
+                <Route path="collaborators" element={<ProfileCollaborators />} />
             </Routes>
             <ProfileFooter orgName={data.organization.name} imageUrl={data.organization.logo} socials={data.socials}/>
     </div>;
