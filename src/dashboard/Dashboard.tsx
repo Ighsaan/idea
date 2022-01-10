@@ -13,7 +13,7 @@ function Dashboard() {
         <div className="results">
             <Row xs={1} md={4}>
                 {results.map((_, idx) => (
-                    <Result id={_.id} name={_.name} subtitle={_.subtitle} description={_.description} imageUrl={_.image_url}/>
+                    <Result key={idx} id={_.id} name={_.name} subtitle={_.subtitle} description={_.description} imageUrl={_.image_url}/>
                 ))}
             </Row>
         </div>

@@ -1,25 +1,23 @@
 import React, { useEffect, useState } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
-import { useHistory } from "react-router";
+import { useNavigate } from "react-router";
 import { Link } from "react-router-dom";
 import { auth, logout } from "../services/firebase";
 import { Navbar, NavDropdown, Form, FormControl } from "react-bootstrap";
-import { Switch, Route, useRouteMatch } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import IdeaProfile from "../profile/Idea"
 import Dashboard from '../dashboard/Dashboard';
 
 function LandingPage() {
     const [user, loading] = useAuthState(auth);
     const [name, setName] = useState("");
-    const history = useHistory();
+    const navigate = useNavigate();
 
     useEffect(() => {
         if (loading) return;
-        if (!user) return history.replace("/login");
+        if (!user) return navigate("/login");
         setName(user.displayName);
-    }, [user, loading, history]);
-    
-    let { path } = useRouteMatch();
+    }, [user, loading, navigate]);
 
     if(loading) return <div></div>
     return (
@@ -48,10 +46,10 @@ function LandingPage() {
                     </Navbar.Collapse>
             </Navbar>
 
-            <Switch>
-                <Route path={`${path}/profile/:id`} component={IdeaProfile} />
-                <Route exact path={path} component={Dashboard} />
-            </Switch>
+            <Routes>
+                <Route path="/profile/:id/*" element={<IdeaProfile />} />
+                <Route path="/" element={<Dashboard />} />
+            </Routes>
         </div>
   );
 }

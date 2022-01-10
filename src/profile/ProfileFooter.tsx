@@ -29,7 +29,7 @@ export default function ProfileFooter(props: ProfileFooterProps) {
                 </div>
                 <div className="col-md-8">
                     <div className="social align-items-center">
-                        {props.socials.map(x => <SocialIcon url={x} />)}
+                        {props.socials.map((x, idx) => <SocialIcon url={x} key={idx}/>)}
                     </div>
                 </div>
             </div>

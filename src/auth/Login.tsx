@@ -1,16 +1,16 @@
 import React, { useEffect } from 'react';
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { auth, signInWithGoogle } from '../services/firebase';
 import { useAuthState } from "react-firebase-hooks/auth";
 import './Login.css'
 export default function Login() {
 
     const [user, loading] = useAuthState(auth);
-    const history = useHistory();
+    const navigate = useNavigate();
     useEffect(() => {
       if (loading) return;
-      if (user) history.replace("/");
-    }, [user, loading, history]);
+      if (user) navigate("/");
+    }, [user, loading, navigate]);
 
   return (
     <section id="entry-page">

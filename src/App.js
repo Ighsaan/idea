@@ -1,6 +1,6 @@
 import Login from './auth/Login';
 import Landing from './landing/Landing';
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -8,10 +8,10 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <Switch>
-          <Route exact path="/login" component={Login} />
-          <Route exact path="*" component={Landing} />
-        </Switch>
+        <Routes>
+          <Route exact path="/*" element={<Landing />} />
+          <Route exact path="/login" element={<Login />} />
+        </Routes>
       </Router>
     </div>
   );
