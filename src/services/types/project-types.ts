@@ -40,6 +40,7 @@ export interface User {
 }
 
 export interface Item {
+    name: string;
     logo: string;
     url: string;
 }

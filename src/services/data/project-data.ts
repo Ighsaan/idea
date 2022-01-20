@@ -20,13 +20,13 @@ export const data: Map<string, Project> = new Map<string, Project>([
         resources: [
             {
                 name: "Jira Board",
-                logo: "logo_url",
-                url: "resource_url"
+                logo: "https://firebasestorage.googleapis.com/v0/b/ideas-4c887.appspot.com/o/resource_logos%2FJira.png?alt=media&token=8b77309a-ad4c-40e5-b32f-7dc1d5ef36a4",
+                url: "https://ideasio.atlassian.net/jira/software/c/projects/IDEA/boards/1"
             },
             {
                 name: "Github Repository",
-                logo: "logo_url",
-                url: "resource_url"
+                logo: "https://firebasestorage.googleapis.com/v0/b/ideas-4c887.appspot.com/o/resource_logos%2FGithub.png?alt=media&token=b64a2d5a-4969-49d9-a4f4-2d23d7dba29c",
+                url: "https://github.com/Ighsaan/idea"
             }
         ], 
         events: [
@@ -37,15 +37,46 @@ export const data: Map<string, Project> = new Map<string, Project>([
             // - PROJECT_CREATED
             // - MILESTONE_ADDED
             {
-                type: "RESOURCE_ADDED",
-                note: "Resource Added",
-                date: "12 September 2020", 
+                type: "NOTE_ADDED",
+                note: "This is a test note for Idea App",
+                date: "17 September 2020", 
                 user: {
                     name: "Bob",
-                    image: "image_url",
-                    url: "url_to_profile"
+                    image: "https://firebasestorage.googleapis.com/v0/b/ideas-4c887.appspot.com/o/users%2Fuser_1.jpg?alt=media&token=cb970c7c-b21b-4743-9603-1f4e97b94ff3",
+                    url: "/user/1"
                 },
                 item: {
+                    name: "",
+                    logo: "",
+                    url: ""
+                }
+            },
+            {
+                type: "SOCIAL_ADDED",
+                note: "Social Added",
+                date: "15 September 2020", 
+                user: {
+                    name: "Bob",
+                    image: "https://firebasestorage.googleapis.com/v0/b/ideas-4c887.appspot.com/o/users%2Fuser_1.jpg?alt=media&token=cb970c7c-b21b-4743-9603-1f4e97b94ff3",
+                    url: "/user/1"
+                },
+                item: {
+                    name: "Twitter",
+                    logo: "logo_url",
+                    url: "resource_url"
+                }
+            },
+            {
+                type: "RESOURCE_ADDED",
+                note: "Resource Added",
+                date: "15 September 2020", 
+                user: {
+                    name: "Bob",
+                    image: "https://firebasestorage.googleapis.com/v0/b/ideas-4c887.appspot.com/o/users%2Fuser_1.jpg?alt=media&token=cb970c7c-b21b-4743-9603-1f4e97b94ff3",
+                    url: "/user/1"
+                },
+                item: {
+                    name: "Jira Dashboard",
                     logo: "logo_url",
                     url: "resource_url"
                 }
@@ -54,12 +85,13 @@ export const data: Map<string, Project> = new Map<string, Project>([
                 type: "PROJECT_CREATED",
                 note: "Project Created",
                 date: "12 September 2020", 
-                user: {
-                    name: "Bob",
-                    image: "image_url",
-                    url: "url_to_profile"
+                user:             {
+                    name: "Mandy",
+                    image: "https://firebasestorage.googleapis.com/v0/b/ideas-4c887.appspot.com/o/users%2Fuser_2.jfif?alt=media&token=26ea7514-10be-45ee-8905-ae33737379fc",
+                    url: "/user/2"
                 },
                 item: {
+                    name: "Vervet",
                     logo: "",
                     url: ""
                 },
@@ -68,13 +100,13 @@ export const data: Map<string, Project> = new Map<string, Project>([
         collaborators: [
             {
                 name: "Bob",
-                image: "image_url",
-                url: "url_to_profile"
+                image: "https://firebasestorage.googleapis.com/v0/b/ideas-4c887.appspot.com/o/users%2Fuser_1.jpg?alt=media&token=cb970c7c-b21b-4743-9603-1f4e97b94ff3",
+                url: "/user/1"
             },            
             {
                 name: "Mandy",
-                image: "image_url",
-                url: "url_to_profile"
+                image: "https://firebasestorage.googleapis.com/v0/b/ideas-4c887.appspot.com/o/users%2Fuser_2.jfif?alt=media&token=26ea7514-10be-45ee-8905-ae33737379fc",
+                url: "/user/2"
             }
         ]
     }]

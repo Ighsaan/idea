@@ -3,7 +3,9 @@ import ProfileHeader from "./ProfileHeader";
 import ProfileNav from "./ProfileNav";
 import ProfileBody from "./ProfileBody";
 import ProfileCollaborators from "./ProfileCollaborators";
+import ProfileResources from "./ProfileResources";
 import ProfileFooter from "./ProfileFooter";
+import ProfileTimeline from "./ProfileTimeline";
 import "./Profile.css";
 
 import { Route, Routes } from "react-router-dom";
@@ -25,9 +27,9 @@ function IdeaProfile() {
             <ProfileNav />
             <Routes>
                 <Route path="/" element={<ProfileBody />} />
-                <Route path="resources" element={<h1>test</h1>} />
-                <Route path="timeline" element={<ProfileBody />} />
-                <Route path="collaborators" element={<ProfileCollaborators />} />
+                <Route path="resources" element={<ProfileResources resources={data.resources}/>} />
+                <Route path="timeline" element={<ProfileTimeline events={data.events}/>} />
+                <Route path="collaborators" element={<ProfileCollaborators collaborators={data.collaborators}/>} />
             </Routes>
             <ProfileFooter orgName={data.organization.name} imageUrl={data.organization.logo} socials={data.socials}/>
     </div>;
